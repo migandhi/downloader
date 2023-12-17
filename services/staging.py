@@ -10,9 +10,11 @@ class Staging:
     def run(self):
         self.free()
         cmd = "mkdir -p {staging_path}".format(staging_path=self.staging_path)
-        output = os.popen(cmd).read()
+        #output = os.popen(cmd).read()
+        os.mkdir(self.staging_path)
         return self.staging_path
 
     def free(self):
         cmd = "rm -Rf {staging_path} ".format(staging_path=self.staging_path)
-        output = os.popen(cmd).read()
+        #output = os.popen(cmd).read()
+        os.rmdir(self.staging_path)
