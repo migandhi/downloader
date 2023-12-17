@@ -18,9 +18,9 @@ class Staging:
         cmd = "rm -Rf {staging_path} ".format(staging_path=self.staging_path)
         #output = os.popen(cmd).read()
         
-        try:
-          os.rmdir(self.staging_path)
-        except:
-          print("file not found")
+        #try:
+          #os.rmdir(self.staging_path)
+        #except:
+          #print("file not found")
 
         
