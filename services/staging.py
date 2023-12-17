@@ -16,7 +16,7 @@ class Staging:
 
     def free(self):
         cmd = "rm -Rf {staging_path} ".format(staging_path=self.staging_path)
-        #output = os.popen(cmd).read()
+        output = os.popen(cmd).read()
         
         #try:
           #os.rmdir(self.staging_path)
