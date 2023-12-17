@@ -17,4 +17,10 @@ class Staging:
     def free(self):
         cmd = "rm -Rf {staging_path} ".format(staging_path=self.staging_path)
         #output = os.popen(cmd).read()
-        os.rmdir(self.staging_path)
+        
+        try:
+          os.rmdir(self.staging_path)
+        except:
+          print("file not found")
+
+        
